@@ -13,7 +13,7 @@ class HomeService {
         NetworkManager.shared.request(endPoint: NetworkEnpoints.posts.rawValue, method: .get, responseType: PostModel.self) {(result: Result<PostModel, NetworkError>) in
             switch result {
             case .success(let data):
-                print("Model göndermeyen istek başarılı:", data)
+                print("istek başarılı:", data)
                 completion(.success(data))
             case .failure(let error):
                 // Hata durumu
